@@ -6,7 +6,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 40),
+      padding: EdgeInsets.only(left: 40, right: 40, top: 55, bottom: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(20),
@@ -15,11 +15,11 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
         color: Color(0xff0F0F0F),
       ),
       child: Column(
-        spacing: 40,
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
-            spacing: 80,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               IconButton(
                 onPressed: () {
@@ -45,13 +45,14 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
               ),
             ],
           ),
+          SizedBox(height: 40),
           TextField(
             decoration: InputDecoration(
               hintText: "Search for your favorite pair",
-              prefixIcon: Icon(Icons.search, color: Colors.black, size: 24,),
+              prefixIcon: Icon(Icons.search, color: Colors.black, size: 24),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(30)),
-                borderSide: BorderSide(color: Colors.black)
+                borderSide: BorderSide(color: Colors.black),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -59,7 +60,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(30)),
-                borderSide: BorderSide(color: Colors.black)
+                borderSide: BorderSide(color: Colors.black),
               ),
               filled: true,
               fillColor: Colors.white,
@@ -73,5 +74,5 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(kToolbarHeight + 134);
+  Size get preferredSize => Size.fromHeight(kToolbarHeight + 135);
 }
