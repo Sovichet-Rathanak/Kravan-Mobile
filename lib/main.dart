@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/profile': (context) => const ProfileScreen(),
       },
       debugShowCheckedModeBanner: false,
+
     );
   }
 }

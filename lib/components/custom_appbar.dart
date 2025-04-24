@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kravan/constants/constants.dart';
 
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppbar({super.key});
@@ -12,7 +13,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),
         ),
-        color: Color(0xff0F0F0F),
+        color: kMainThemeColor,
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,

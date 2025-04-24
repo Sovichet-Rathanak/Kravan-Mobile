@@ -13,13 +13,14 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: [
-            DividerText(dividerLabel: "Latest Drop",),
+            DividerText(dividerLabel: "Latest Drop"),
             SizedBox(height: 30),
             AdBanner(),
-            DividerText(dividerLabel: "New and Noteworthy")
+            DividerText(dividerLabel: "New and Noteworthy"),
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
