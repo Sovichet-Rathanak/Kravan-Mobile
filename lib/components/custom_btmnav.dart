@@ -8,30 +8,45 @@ class BottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NavigationBar(
-      backgroundColor: kMainThemeColor,
-      elevation: 0,
-      indicatorShape: UnderlineIndicator(color: Colors.white),
-      selectedIndex: selectedIndex,
-      onDestinationSelected: onItemTapped,
-      destinations: [
-        NavigationDestination(
-          icon: Icon(Icons.home_outlined, color: Colors.white),
-          label: '',
-        ),
-        NavigationDestination(
-          icon: Icon(Icons.favorite_border_sharp, color: Colors.white),
-          label: '',
-        ),
-        NavigationDestination(
-          icon: Icon(Icons.shopping_bag_outlined, color: Colors.white),
-          label: '',
-        ),
-        NavigationDestination(
-          icon: Icon(Icons.person_2_outlined, color: Colors.white),
-          label: '',
-        ),
-      ],
+    return SizedBox(
+      height: 70,
+      child: NavigationBar(
+        backgroundColor: kMainThemeColor,
+        elevation: 0,
+        indicatorShape: UnderlineIndicator(color: Colors.white),
+        selectedIndex: selectedIndex,
+        onDestinationSelected: onItemTapped,
+        destinations: [
+          Container(
+            padding: EdgeInsets.only(top: 15),
+            child: NavigationDestination(
+              icon: Icon(Icons.home_outlined, color: Colors.white),
+              label: '',
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 15),
+            child: NavigationDestination(
+              icon: Icon(Icons.favorite_border_sharp, color: Colors.white),
+              label: '',
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 15),
+            child: NavigationDestination(
+              icon: Icon(Icons.shopping_bag_outlined, color: Colors.white),
+              label: '',
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 15),
+            child: NavigationDestination(
+              icon: Icon(Icons.person_2_outlined, color: Colors.white),
+              label: '',
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

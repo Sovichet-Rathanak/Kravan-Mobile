@@ -28,7 +28,7 @@ class _BrandBtnRowState extends State<BrandBtnRow> {
     return Container(
       margin: EdgeInsets.only(left: 20, top: 30),
       child: SizedBox(
-        height: 40,
+        height: 50,
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemCount: brandButtons.length,

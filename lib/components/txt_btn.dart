@@ -9,9 +9,20 @@ class TxtBtn extends StatelessWidget {
     return Container(
       width: 100,
       height: 40,
+      margin: isSelected ? EdgeInsets.only(bottom: 4) : null,
       decoration: BoxDecoration(
         color: isSelected ? Colors.black : Colors.white,
-        borderRadius: BorderRadius.all(Radius.circular(20)),
+        borderRadius: BorderRadius.all(Radius.circular(40)),
+        boxShadow:
+            isSelected
+                ? [
+                  BoxShadow(
+                    color: Colors.black,
+                    offset: Offset(1.0, 1.0),
+                    blurRadius: 4,
+                  ),
+                ]
+                : null,
       ),
       child: Center(
         child: Text(
