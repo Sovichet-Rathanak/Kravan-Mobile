@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kravan/components/carousel.dart';
 import 'package:kravan/components/custom_appbar.dart';
-import 'package:kravan/constants/constants.dart';
+import 'package:kravan/components/text_divider.dart';
+import 'package:kravan/constants/brand_btns.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,12 +17,11 @@ class HomeScreen extends StatelessWidget {
             DividerText(dividerLabel: "Latest Drop"),
             SizedBox(height: 30),
             AdBanner(),
+            BrandBtnRow(),
             DividerText(dividerLabel: "New and Noteworthy"),
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
-
